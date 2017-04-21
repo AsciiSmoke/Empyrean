@@ -1,0 +1,16 @@
+{
+  "name": "empyrean_boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Craig Poole",
+  "license": "MIT",
+
+  "scripts": {
+    "nodeserver": "http-server.cmd -p 8023",
+    "tsc":"tsc -w",
+    "sass": "node-sass ./style -o ./style --output-style compressed",
+    "sass_w": "node-sass ./style -o ./style --output-style compressed --watch",
+    "server": "concurrently \"npm run nodeserver\" \"npm run tsc\" \"npm run sass\" \"npm run sass_w\""
+  }
+}

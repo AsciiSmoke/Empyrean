@@ -1,0 +1,4 @@
+// Mixins
+@mixin rounded($amount) {
+  border-radius: $amount;
+}
