@@ -1,16 +1,30 @@
 {
   "name": "empyrean_boilerplate",
   "version": "0.0.1",
-  "description": "",
+  "description": "A super-slim boilerplate website including node server, typescript compilation and sass compilation",
   "main": "index.js",
   "author": "Craig Poole",
   "license": "MIT",
-
   "scripts": {
     "nodeserver": "http-server.cmd -p 8023",
-    "tsc":"tsc -w",
+    "tsc": "tsc -w",
     "sass": "node-sass ./style -o ./style --output-style compressed",
     "sass_w": "node-sass ./style -o ./style --output-style compressed --watch",
     "server": "concurrently \"npm run nodeserver\" \"npm run tsc\" \"npm run sass\" \"npm run sass_w\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsciiSmoke/Empyrean.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AsciiSmoke/Empyrean/issues"
+  },
+  "homepage": "https://github.com/AsciiSmoke/Empyrean#readme",
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "mongodb": "^2.2.33",
+    "nodeserver": "^0.9.0",
+    "sass": "^1.0.0-beta.2",
+    "tsc": "^1.20150623.0"
   }
 }
