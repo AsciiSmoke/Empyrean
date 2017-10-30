@@ -1,2 +1,2 @@
 # Empyrean
-A super-slim boilerplate website including node server, typescript compilation and sass compilation
+A complete website boilerplate including node server, typescript and sass compilation
