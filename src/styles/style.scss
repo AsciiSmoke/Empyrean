@@ -1,15 +1,17 @@
 @import 'mixins';
 @import 'colours';
-
-
 .box {
-  @include rounded(.5em);
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  background: $lightgray;
   border: 3px solid $gray;
+  @include rounded(.5em);
 }
-
 
 // Styles
 body {
   font-family: sans-serif;
   font-size: 1em;
+  color: $gray;
 }
