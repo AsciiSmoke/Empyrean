@@ -1,17 +1,12 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
+        "target": "es6",
+        "module": "es2015",
         "moduleResolution": "node",
         "noImplicitAny": true,
         "sourceMap": true,
         "outDir": "dist/scripts",
-        "jsx":"react",
-        "lib": [
-            "es2016",
-            "dom",
-            "es5"
-        ]
+        "jsx": "react"
     },
     "include": [
         "src/scripts/**/*"
