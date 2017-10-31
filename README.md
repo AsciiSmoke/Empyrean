@@ -6,7 +6,6 @@ A complete website boilerplate including node express server, typescript, react 
 npm i
 ```
 
-
 ### Start
 
 ##### development mode
