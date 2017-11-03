@@ -1,24 +1,21 @@
-const express = require("express")
-const app = express()
+const express = require('express');
+const exphbs = require('express-handlebars');
+const path = require('path');
+const compression = require('compression');
+const fs = require('fs');
+const routes = require("./routes");
 
-app.use(express.static("./"));
+const port = parseInt(process.env.PORT, 10) || 3000;
+const app = express();
 
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + "/index.htm");
-});
+app.disable('x-powered-by');
+app.use('/node-resources', express.static(path.join(__dirname, 'node-resources')));
+app.use('/views', express.static(path.join(__dirname, 'views')));
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+app.use(compression());
+app.use('/', routes);
 
-app.post("/", function (req, res) {
-    res.send("Got a POST request");
-});
-
-app.put("/", function (req, res) {
-    res.status(403).send("Put method not currently allowed, use GET or POST");
-});
-
-app.delete("/", function (req, res) {
-    res.status(403).send("Delete method not currently allowed, use GET or POST");
-});
-
-app.listen(3000, function () {
-    console.log("App listening on port 3000!");
+app.listen(port, function () {
+    console.log("App listening on port " + port + "!");
 });
