@@ -12,11 +12,11 @@ app.post("/", function (req, res) {
 });
 
 app.put("/", function (req, res) {
-    res.status(403).send("Put method not currently allowed, use Get or POST");
+    res.status(403).send("Put method not currently allowed, use GET or POST");
 });
 
 app.delete("/", function (req, res) {
-    res.status(403).send("Delete method not currently allowed, use Get or POST");
+    res.status(403).send("Delete method not currently allowed, use GET or POST");
 });
 
 app.listen(3000, function () {
