@@ -4,7 +4,7 @@ const app = express()
 app.use(express.static("./"));
 
 app.get("/", function (req, res) {
-    res.send("Hello World!");
+    res.sendFile(__dirname + "/index.htm");
 });
 
 app.post("/", function (req, res) {
