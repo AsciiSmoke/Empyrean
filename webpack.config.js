@@ -6,7 +6,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     cache: true,
     entry: {
-        global: path.resolve(__dirname, "./src/scripts/index.tsx"),
+        index: path.resolve(__dirname, "./src/scripts/index.tsx"),
+        list: path.resolve(__dirname, "./src/scripts/list.tsx"),
     },
 
     output: {
@@ -19,7 +20,11 @@ module.exports = {
     devtool: "source-map",
 
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+        alias: {
+            scripts: path.resolve(__dirname, 'src/scripts/'),
+            styles: path.resolve(__dirname, 'src/styles/')
+        }
     },
 
     module: {
