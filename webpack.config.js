@@ -23,7 +23,7 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
         alias: {
             scripts: path.resolve(__dirname, 'src/scripts/'),
-            styles: path.resolve(__dirname, 'src/styles/')
+            styles: path.resolve(__dirname, 'src/styles/'),
         }
     },
 
