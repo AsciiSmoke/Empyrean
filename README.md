@@ -27,8 +27,8 @@ npm run prod
 ##### TypeScript
 Used primarily to provide a browser agnostic approach to object oriented JavaScript.
 
-##### Handlebars Templates
-Provides easy to read and edit server-rendered page layouts. Could be used client-side for controls but React is better at managing DOM controls and updates.
+##### Nunjucks Templates
+Provides server-rendered and cached page layouts that are easier to read and maintain than React. Could be used client-side for controls but React is better at managing DOM controls and updates.
 
 ##### React
 Reusable, interactive, client-side controls rendered client-side.
@@ -40,4 +40,4 @@ Sensible and smart css management.
 Minification, linting and source maps for styles and scripts.
 
 ##### Node Express
-Provides a simple HTTP server. Currently only used to server handlebars views.
+Provides a simple HTTP server. Currently only used to serve handlebars views.

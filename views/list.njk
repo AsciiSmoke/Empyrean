@@ -1,0 +1,17 @@
+{% extends "./layouts/main.njk" %}
+
+{% block head %}
+    <link href="./dist/styles/style.css" rel="stylesheet">
+{% endblock %}
+
+
+{% block body %}
+    <h1>Hello from Handlebars</h1>
+    <div id="ReactDiv"></div>
+{% endblock %}
+
+
+{% block footer %}
+    <script src="./dist/scripts/commons-bundle.js" type="text/javascript"></script>
+    <script src="./dist/scripts/list.js" type="text/javascript"></script>
+{% endblock %}

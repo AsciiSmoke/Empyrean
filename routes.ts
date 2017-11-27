@@ -1,34 +1,35 @@
 const express = require("express");
 const nodeFetch = require("node-fetch");
-const routes = express.Router();
+const router = express.Router();
 
-routes.use(express.static("./"));
+router.use(express.static("./"));
 
-routes.get(/^\/$/, (req, res) => {
+router.get(/^\/$/, (req, res) => {
     const meta = { title: "home page" };
-    res.render("index", { meta });
+    res.render("index.njk", { meta });
 });
 
-routes.get(/^\/([a-z]*)$/i, (req, res) => {
+router.get(/^\/([a-z]*)$/i, (req, res) => {
     const page = req.params[0];
-    const meta = { title: page + " page" };
-    res.render(page, { meta });
+    const prettyName = page.charAt(0).toUpperCase() + page.slice(1);
+    const meta = { title: prettyName };
+    res.render(page + ".njk", { meta });
 });
 
-routes.post("/", (req, res) => {
+router.post("/", (req, res) => {
     res.send("Got a POST request");
 });
 
-routes.put("/", (req, res) => {
+router.put("/", (req, res) => {
     res.status(403).send("Put method not currently allowed, use GET or POST");
 });
 
-routes.delete("/", (req, res) => {
+router.delete("/", (req, res) => {
     res.status(403).send("Delete method not currently allowed, use GET  or POST");
 });
 
-routes.use(function (err, req, res, next) {
-    res.status(500).render("error");
+router.use(function (err, req, res, next) {
+    res.status(500).render("error.njk");
 });
 
-module.exports = routes;
+module.exports = router;
