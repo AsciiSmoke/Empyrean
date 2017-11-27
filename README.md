@@ -21,3 +21,23 @@ npm run dev
 ```
 npm run prod
 ```
+
+### Tech Stack
+
+##### TypeScript
+Used primarily to provide a browser agnostic approach to object oriented JavaScript.
+
+##### Handlebars Templates
+Provides easy to read and edit server-rendered page layouts. Could be used client-side for controls but React is better at managing DOM controls and updates.
+
+##### React
+Reusable, interactive, client-side controls rendered client-side.
+
+##### SASS / SCSS
+Sensible and smart css management.
+
+##### Gulp / Webpack
+Minification, linting and source maps for styles and scripts.
+
+##### Node Express
+Provides a simple HTTP server. Currently only used to server handlebars views.
