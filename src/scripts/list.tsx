@@ -6,13 +6,20 @@ import { Hello } from "./components/hello";
 import { Card } from "./components/card/card";
 
 (function () {
-    ReactDOM.render(
-        <div>
-            <Hello compiler="TypeScript" framework="React" />
-            <Card />
-        </div>,
-        document.getElementById("ReactDiv")
-    );
-})();
+    let poke = new Pokemon();
 
-let bob = new Pokemon();
+    poke.getListData().then(() => {
+        // TODO: Move card rendering into a separate method and call after promise completes
+        ReactDOM.render(
+            <div className="grid">
+                [{poke.list.length}]
+                {
+                    poke.list.map((item) => {
+                        return <Card name="{{item}}" />
+                    })
+                }
+            </div>,
+            document.getElementById("ReactDiv")
+        );
+    });
+})();

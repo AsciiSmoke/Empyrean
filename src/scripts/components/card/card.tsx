@@ -1,7 +1,9 @@
 import * as React from "react";
 
-export class Card extends React.Component {
+export interface PokeProps { name: string; }
+
+export class Card extends React.Component<PokeProps, {}> {
     render() {
-        return <div className="card">React!</div>;
+        return <div className="card">{this.props.name}</div>;
     }
 }
