@@ -1,20 +1,24 @@
 @import 'mixins';
 @import 'colours';
 @import 'components/card/card';
-
 .box {
-  display: inline-block;
-  margin: 10px;
-  padding: 5px 10px;
-  background: $lightgray;
-  background: linear-gradient(white, $lightgray);
-  border: 3px solid $gray;
-  @include rounded(.5em);
+    display: inline-block;
+    margin: 10px;
+    padding: 5px 10px;
+    background: $lightgray;
+    background: linear-gradient(white, $lightgray);
+    border: 3px solid $gray;
+    @include rounded(.5em);
 }
 
 // Styles
 body {
-  font-family: sans-serif;
-  font-size: 1em;
-  color: $gray;
+    color: $gray;
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
 }

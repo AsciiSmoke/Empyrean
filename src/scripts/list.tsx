@@ -12,10 +12,9 @@ import { Card } from "./components/card/card";
         // TODO: Move card rendering into a separate method and call after promise completes
         ReactDOM.render(
             <div className="grid">
-                [{poke.list.length}]
                 {
                     poke.list.map((item) => {
-                        return <Card name="{{item}}" />
+                        return <Card name={item.name} />
                     })
                 }
             </div>,
