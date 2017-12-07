@@ -1,11 +1,11 @@
 import * as React from "react";
-import { PokeApi } from "../../models/pokemon";
+import { TestApi } from "../../models/testapi";
 
-export interface PokeProps { name: string; }
-
-export class Card extends React.Component<PokeProps, {}> {
+export class Card extends React.Component<any, {}> {
     render() {
-        console.log("I am", this.props.name);
-        return <div className="card">{this.props.name}</div>;
+        console.log("I am", this.props.item.name);
+        return <div className="card">
+            <img src={this.props.item.imageUrl} />
+        </div>;
     }
 }
