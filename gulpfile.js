@@ -7,14 +7,14 @@ const sourcemaps = require('gulp-sourcemaps');
 const sasslint = require('gulp-sass-lint');
 
 gulp.task('lint', () =>
-    gulp.src('src/styles/**/*')
+    gulp.src('src/styles/style.scss')
     .pipe(sasslint())
     .pipe(sasslint.format())
     .pipe(sasslint.failOnError())
 );
 
 gulp.task('sass', () =>
-    gulp.src('src/styles/**/*')
+    gulp.src('src/styles/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())

@@ -1,12 +1,16 @@
 @import 'mixins';
 @import 'colours';
 @import 'components/card/card';
+* {
+  box-sizing: border-box;
+}
+
 .box {
   display: inline-block;
   margin: 10px;
   padding: 5px 10px;
   background: $lightgray;
-  background: linear-gradient(white, $lightgray);
+  background: linear-gradient($lightgray, #fff);
   border: 3px solid $gray;
   @include rounded(.5em);
 }

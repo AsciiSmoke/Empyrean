@@ -6,15 +6,14 @@ import { Hello } from "./components/hello";
 import { Card } from "./components/card/card";
 
 (function () {
-    let poke = new Pokemon();
+    let poké = new Pokemon();
 
-    poke.getListData().then(() => {
-        // TODO: Move card rendering into a separate method and call after promise completes
+    poké.getListData().then(() => {
         ReactDOM.render(
             <div className="grid">
                 {
-                    poke.list.map((item) => {
-                        return <Card name={item.name} />
+                    poké.list.map((item, index) => {
+                        return <Card key={item.name} name={item.name} />
                     })
                 }
             </div>,
