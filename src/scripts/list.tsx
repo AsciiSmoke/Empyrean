@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Pokemon } from "./models/pokemon";
+import { PokeApi } from "./models/pokemon";
 import { Hello } from "./components/hello";
 import { Card } from "./components/card/card";
 
 (function () {
-    let poké = new Pokemon();
+    let poké = new PokeApi();
 
     poké.getListData().then(() => {
         ReactDOM.render(

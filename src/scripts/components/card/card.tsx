@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PokeApi } from "../../models/pokemon";
 
 export interface PokeProps { name: string; }
 
