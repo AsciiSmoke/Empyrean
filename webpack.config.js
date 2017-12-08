@@ -8,6 +8,7 @@ module.exports = {
     entry: {
         index: path.resolve(__dirname, "./src/scripts/index.tsx"),
         list: path.resolve(__dirname, "./src/scripts/list.tsx"),
+        mtg: path.resolve(__dirname, "./src/scripts/mtg.tsx"),
     },
 
     output: {
