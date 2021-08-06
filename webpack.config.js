@@ -32,17 +32,13 @@ module.exports = {
         rules: [
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+			{ test: /\.s[ac]ss$/i, use: ["style-loader", "css-loader", "sass-loader",], },
         ]
     },
 
     plugins: [
         new WebpackNotifierPlugin({ alwaysNotify: true }),
         new webpack.optimize.ModuleConcatenationPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'commons-stuff',
-            filename: 'commons-bundle.js',
-            minChunks: module => module.context && module.context.indexOf('node_modules') !== -1
-        }),
 
         new UglifyJSPlugin({
             sourceMap: true,

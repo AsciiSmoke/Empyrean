@@ -8,8 +8,8 @@
   "sasslintConfig": "sass-lint.yml",
   "scripts": {
     "nodeserver": "nodemon server/server.js",
-    "dev": "cross-env NODE_ENV=development concurrently \"gulp\" \"gulp sass:watch\" \"tsc -w\" \"webpack -w\" \"npm run nodeserver\"",
-    "prod": "cross-env NODE_ENV=production concurrently \"gulp\" \"tsc\" \"webpack\" \"npm run nodeserver\""
+    "dev": "cross-env NODE_ENV=development concurrently \"tsc -w\" \"webpack -w\" \"npm run nodeserver\"",
+    "prod": "cross-env NODE_ENV=production concurrently \"tsc\" \"webpack\" \"npm run nodeserver\""
   },
   "repository": {
     "type": "git",
@@ -24,19 +24,26 @@
     "@types/react": "^16.0.28",
     "@types/react-dom": "^16.0.3",
     "awesome-typescript-loader": "^3.4.1",
+    "chokidar": "^3.5.2",
     "compression": "^1.7.1",
     "concurrently": "^3.5.1",
     "cross-env": "^5.1.1",
     "express": "^4.16.2",
     "mongodb": "^4.1.0",
+    "node-fetch": "^2.6.1",
     "nodeserver": "^0.0.2",
     "nunjucks": "^3.0.1",
     "path": "^0.12.7",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "sass-loader": "^12.1.0",
     "source-map-loader": "^0.2.3",
     "tsc": "^1.20150623.0",
     "typescript": "^2.6.2",
-    "webpack": "^5.49.0"
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-notifier": "^1.13.0",
+    "webpack-shell-plugin-next": "^2.2.2"
   }
 }
